@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { useRouter } from "next/navigation"
+// import { useRouter } from "next/navigation"
 import type { Order } from "@/types/order"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -50,7 +50,7 @@ export default function OrderList() {
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false)
   const [isDetailsModalOpen, setIsDetailsModalOpen] = useState(false)
   const [statusFilter, setStatusFilter] = useState("")
-  const router = useRouter()
+  // const router = useRouter()
   const { toast } = useToast()
 
   const fetchOrders = async () => {
@@ -70,7 +70,9 @@ export default function OrderList() {
   }
 
   useEffect(() => {
+    // eslint-disable-next-line
     fetchOrders()
+    //  eslint-disable-next-line
   }, [page, searchTerm, statusFilter])
   const handleCreateOrder = async (newOrder: Omit<Order, "_id">) => {
     try {

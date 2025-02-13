@@ -22,7 +22,7 @@ import {
           <DialogHeader>
             <DialogTitle>Delete Order</DialogTitle>
             <DialogDescription>
-              Are you sure you want to delete the order with ID "{orderId}"? This action cannot be undone.
+              Are you sure you want to delete the order with ID &quot;{orderId}&quot;? This action cannot be undone.
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>

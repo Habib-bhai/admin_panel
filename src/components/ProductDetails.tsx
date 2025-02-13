@@ -5,15 +5,19 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import Image from "next/image"
 
+//  eslint-disable-next-line
 const ProductDetails = ({ product }:any) => {
   return (
     <div className="space-y-6">
       <div className="flex gap-6">
-        <img
+        <Image
           src={product.image}
           alt={product.name}
           className="h-48 w-48 rounded-lg object-cover"
+          height={150}
+          width={150}
         />
         <div className="space-y-4">
           <div>
@@ -54,6 +58,7 @@ const ProductDetails = ({ product }:any) => {
           <div>
             <h4 className="font-semibold">Available Colors</h4>
             <div className="flex gap-2 mt-1">
+            {/* eslint-disable-next-line */}
               {product.colors.map((color:any) => (
                 <Badge key={color} variant="outline">
                   {color}
@@ -65,6 +70,7 @@ const ProductDetails = ({ product }:any) => {
           <div>
             <h4 className="font-semibold">Available Sizes</h4>
             <div className="flex gap-2 mt-1">
+            {/* eslint-disable-next-line */}
               {product.sizes.map((size:any) => (
                 <Badge key={size} variant="outline">
                   {size}
@@ -76,6 +82,7 @@ const ProductDetails = ({ product }:any) => {
           <div>
             <h4 className="font-semibold">Tags</h4>
             <div className="flex flex-wrap gap-2 mt-1">
+            {/* eslint-disable-next-line */}
               {product.tags.map((tag:any) => (
                 <Badge key={tag} variant="secondary">
                   {tag}

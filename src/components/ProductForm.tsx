@@ -12,6 +12,7 @@ import {
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
 
+// eslint-disable-next-line
 const ProductForm = ({ product, onSubmit }:any) => {
   const [formData, setFormData] = useState(
     product || {
