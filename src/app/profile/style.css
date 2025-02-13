@@ -1,0 +1,52 @@
+:root {
+    --color-primary: #098135;
+    --color-primary-light: #0ca344;
+    --color-primary-lighter: #0fc553;
+    --color-primary-lightest: #1de76a;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(
+      -45deg,
+      var(--color-primary),
+      var(--color-primary-light),
+      var(--color-primary-lighter),
+      var(--color-primary-lightest)
+    );
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+  }
+  
+  .hover-lift {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-5px);
+  }
+  
+  .text-shadow {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  
