@@ -1,6 +1,3 @@
-import { Bar, BarChart } from "recharts"
-
-import { ChartContainer, ChartConfig } from "@/components/ui/chart"
 import DataCard from "@/components/DataCard";
 import SalesChart from "@/components/SalesChart";
 import { OrdersData } from "@/components/OrdersData";

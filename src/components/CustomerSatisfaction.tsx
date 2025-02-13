@@ -1,14 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { TrendingUp } from "lucide-react"
 import { Label, Pie, PieChart } from "recharts"
 
 import {
     Card,
     CardContent,
     CardDescription,
-    CardFooter,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
@@ -46,6 +44,7 @@ const chartConfig = {
 } satisfies ChartConfig
 
 export default function CustomerSatisfaction() {
+    // eslint-disable-next-line
     const totalVisitors = React.useMemo(() => {
         return chartData.reduce((acc, curr) => {
             if (curr && typeof curr.visitors === 'number') {
