@@ -14,9 +14,9 @@ export default function Home() {
     <div className="overflow-x-hidden flex flex-col justify-center items-center w-screen">
       <div className="overflow-x-hidden flex justify-center items-center mt-10 flex-wrap gap-5 md:gap-10">
         <DataCard image="watch.png" title="total views" value="$5.893k" />
-        <DataCard image="watch.png" title="total views" value="$5.893k" />
-        <DataCard image="watch.png" title="total views" value="$5.893k" />
-        <DataCard image="watch.png" title="total views" value="$5.893k" />
+        <DataCard image="shopping-cart.png" title="total revenue" value="$15k" />
+        <DataCard image="product.png" title="total products" value="153" />
+        <DataCard image="human.png" title="total users" value="32k" />
       </div>
 
       {/* pie graphs */}

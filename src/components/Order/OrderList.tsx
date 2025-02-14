@@ -164,7 +164,7 @@ export default function OrderList() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">
-              ${orders.reduce((total, order) => total + order.total, 0).toFixed(2)}
+              ${orders?.reduce((total, order) => total + order.total, 0).toFixed(2)}
             </div>
             <p className="text-xs text-muted-foreground">+10.5% from last month</p>
           </CardContent>
@@ -230,7 +230,7 @@ export default function OrderList() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {orders.map((order) => (
+            {orders?.map((order) => (
               <TableRow key={order._id}>
                 <TableCell className="font-medium">{order._id}</TableCell>
                 <TableCell>{order.customer.name}</TableCell>

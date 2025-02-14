@@ -189,7 +189,7 @@ export default function ProfilePage() {
   return (
     <>
       <style>{styles}</style>
-      <div className="container mx-auto py-10 gradient-bg min-h-screen">
+      <div className="my-10 rounded-xl md:px-10 container mx-auto py-10 gradient-bg min-h-screen overflow-x-hidden">
         <motion.div className="grid gap-6 md:grid-cols-2" variants={containerVariants} initial="hidden" animate="visible">
           <motion.div variants={itemVariants}>
             <Card className="glass-card overflow-hidden hover-lift">

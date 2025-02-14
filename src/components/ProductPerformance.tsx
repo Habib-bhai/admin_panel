@@ -38,7 +38,7 @@ const chartConfig = {
 
 export function ProductPerformance() {
   return (
-    <Card className="md:w-[40vw] bg-black text-white">
+    <Card className="w-full md:h-[500px] md:w-[40vw] bg-black text-white">
       <CardHeader>
         <CardTitle className="text-white">Product Category Performance</CardTitle>
         <CardDescription className="text-gray-400">Current Stock vs Sales</CardDescription>

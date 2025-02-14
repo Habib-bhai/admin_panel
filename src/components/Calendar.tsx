@@ -121,7 +121,7 @@ const Calendar: React.FC = () => {
   };
 
   return (
-    <div className="w-full  rounded-2xl border  border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
+    <div className=" rounded-2xl border  border-gray-200 bg-black dark:border-gray-800 dark:bg-white/[0.03] text-white">
       <div className="custom-calendar ">
         <FullCalendar
           ref={calendarRef}
