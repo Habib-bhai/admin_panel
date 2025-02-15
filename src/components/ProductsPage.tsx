@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import {
     Table,
@@ -37,11 +37,12 @@ import ProductForm from "./ProductForm"
 import ProductDetails from "./ProductDetails"
 import { urlFor } from "@/sanity/lib/image"
 import Image from "next/image"
+import { client } from "@/lib/sanity"
 
 
 // eslint-disable-next-line
-const ProductsPage = ({ initialProducts }: any) => {
-    const [products] = useState(initialProducts)
+const ProductsPage = () => {
+    const [products, setProducts] = useState([])
     const [selectedProduct, setSelectedProduct] = useState(null)
     const [isCreateModalOpen, setIsCreateModalOpen] = useState(false)
     const [isViewModalOpen, setIsViewModalOpen] = useState(false)
@@ -49,6 +50,18 @@ const ProductsPage = ({ initialProducts }: any) => {
     const [searchQuery, setSearchQuery] = useState("")
     const [categoryFilter, setCategoryFilter] = useState("")
     const [sortBy, setSortBy] = useState("")
+
+
+    useEffect(()=> {
+        const productData =async()=> {
+            const products = await client.fetch('*[_type == "products"]')
+            setProducts(products)
+        }
+
+        productData()
+
+    }, [categoryFilter])
+
 
     //  eslint-disable-next-line
     const filteredProducts = products
